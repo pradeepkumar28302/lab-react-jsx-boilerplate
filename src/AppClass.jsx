@@ -27,4 +27,17 @@ export default class AppClass extends Component{
   }
 
   // code here
+  render(){
+    let imageData=this.imageData();
+    return(
+      <>
+        <h1>Kalvium Gallery</h1>
+        <div className="parent_div">
+          {imageData.map((item)=>{
+            return <img src={item.img} alt="" className="image"/>
+          })}
+          </div>
+      </>
+    )
+  }
 }
